@@ -745,7 +745,7 @@
       ]
     },
     {
-      "name": "Хоосон үзсэн хичээлтэй үед урьдач биелээгүй",
+      "name": "Зарим урьдач үзсэн үед дутуу нөхцөлийг заах",
       "item": [
         {
           "name": "Setup: оюутан",
@@ -769,7 +769,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\"status\":\"active\",\"coursesTaken\":[]}",
+              "raw": "{\"status\":\"active\",\"coursesTaken\":[\"CS201\"]}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -812,7 +812,7 @@
           "response": []
         },
         {
-          "name": "Хоосон үзсэн хичээлтэй үед урьдач биелээгүй",
+          "name": "Зарим урьдач үзсэн үед дутуу нөхцөлийг заах",
           "request": {
             "method": "POST",
             "header": [
@@ -849,7 +849,7 @@
                 "exec": [
                   "pm.test(\"HTTP статус 200\", function () { pm.response.to.have.status(200); });",
                   "pm.test(\"result = ERROR_PREREQUISITES\", function () { pm.expect(pm.response.json().result).to.eql(\"ERROR_PREREQUISITES\"); });",
-                  "pm.test(\"missing жагсаалт зөв\", function () { pm.expect(pm.response.json().missing).to.eql([\"CS201\",\"CS202\"]); });"
+                  "pm.test(\"missing жагсаалт зөв\", function () { pm.expect(pm.response.json().missing).to.eql([\"CS202\"]); });"
                 ]
               }
             }

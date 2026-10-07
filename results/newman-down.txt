@@ -1,4 +1,4 @@
-(node:8108) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(node:21868) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
 (Use `node --trace-deprecation ...` to show where the warning was created)
 newman
 
@@ -107,7 +107,7 @@ Lab05 API системийн тест
  37. result = OK
  38. registrationID тоон утгатай
 
-□ Хоосон үзсэн хичээлтэй үед урьдач биелээгүй
+□ Зарим урьдач үзсэн үед дутуу нөхцөлийг заах
 └ Setup: оюутан
   PUT http://localhost:3000/students/B232270023_09 [errored]
      connect ECONNREFUSED 127.0.0.1:3000
@@ -116,7 +116,7 @@ Lab05 API системийн тест
   PUT http://localhost:3000/courses/CS313_09 [errored]
      connect ECONNREFUSED 127.0.0.1:3000
 
-└ Хоосон үзсэн хичээлтэй үед урьдач биелээгүй
+└ Зарим урьдач үзсэн үед дутуу нөхцөлийг заах
   POST http://localhost:3000/registrations [errored]
      connect ECONNREFUSED 127.0.0.1:3000
  42. HTTP статус 200
@@ -139,7 +139,7 @@ Lab05 API системийн тест
  49. result = ERROR_BAD_REQUEST
 
 → JSONPlaceholder users: 3 oracle
-  GET https://jsonplaceholder.typicode.com/users [200 OK, 6.62kB, 84ms]
+  GET https://jsonplaceholder.typicode.com/users [200 OK, 6.62kB, 85ms]
   √  HTTP статус 200
   √  Хариу массив байна
   √  Эхний хэрэглэгчийн нэр Leanne Graham
@@ -161,7 +161,7 @@ Lab05 API системийн тест
 ├───────────────────────────────────────────────────────────────┤
 │ total data received: 5.65kB (approx)                          │
 ├───────────────────────────────────────────────────────────────┤
-│ average response time: 3ms [min: 84ms, max: 84ms, s.d.: 16ms] │
+│ average response time: 3ms [min: 85ms, max: 85ms, s.d.: 16ms] │
 └───────────────────────────────────────────────────────────────┘
 
 [31m   # [39m[31m failure        [39m[31m detail                                                                                                   [39m
@@ -374,17 +374,17 @@ Lab05 API системийн тест
  42.  AssertionError  HTTP статус 200                                                                                          
                       expected PostmanResponse{ …(5) } to have property 'code'                                                 
                       at assertion:0 in test-script                                                                            
-                      inside "Хоосон үзсэн хичээлтэй үед урьдач биелээгүй / Хоосон үзсэн хичээлтэй үед урьдач биелээгүй"       
+                      inside "Зарим урьдач үзсэн үед дутуу нөхцөлийг заах / Зарим урьдач үзсэн үед дутуу нөхцөлийг заах"       
 [90m     [39m[90m                [39m[90m                                                                                                          [39m
  43.  JSONError       result = ERROR_PREREQUISITES                                                                             
                       "undefined" is not valid JSON                                                                            
                       at assertion:1 in test-script                                                                            
-                      inside "Хоосон үзсэн хичээлтэй үед урьдач биелээгүй / Хоосон үзсэн хичээлтэй үед урьдач биелээгүй"       
+                      inside "Зарим урьдач үзсэн үед дутуу нөхцөлийг заах / Зарим урьдач үзсэн үед дутуу нөхцөлийг заах"       
 [90m     [39m[90m                [39m[90m                                                                                                          [39m
  44.  JSONError       missing жагсаалт зөв                                                                                     
                       "undefined" is not valid JSON                                                                            
                       at assertion:2 in test-script                                                                            
-                      inside "Хоосон үзсэн хичээлтэй үед урьдач биелээгүй / Хоосон үзсэн хичээлтэй үед урьдач биелээгүй"       
+                      inside "Зарим урьдач үзсэн үед дутуу нөхцөлийг заах / Зарим урьдач үзсэн үед дутуу нөхцөлийг заах"       
 [90m     [39m[90m                [39m[90m                                                                                                          [39m
  45.  Error                                                                                                                    
                       connect ECONNREFUSED 127.0.0.1:3000                                                                      

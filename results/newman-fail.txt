@@ -1,4 +1,4 @@
-(node:14260) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(node:12876) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
 (Use `node --trace-deprecation ...` to show where the warning was created)
 newman
 
@@ -6,13 +6,13 @@ Lab05 API системийн тест
 
 □ Амжилттай бүртгүүлэхэд OK
 └ Setup: оюутан
-  PUT http://localhost:3000/students/B232270023_01 [200 OK, 178B, 21ms]
+  PUT http://localhost:3000/students/B232270023_01 [200 OK, 178B, 16ms]
 
 └ Setup: хичээл
-  PUT http://localhost:3000/courses/CS313_01 [200 OK, 178B, 5ms]
+  PUT http://localhost:3000/courses/CS313_01 [200 OK, 178B, 3ms]
 
 └ Амжилттай бүртгүүлэхэд OK
-  POST http://localhost:3000/registrations [201 Created, 202B, 6ms]
+  POST http://localhost:3000/registrations [201 Created, 202B, 4ms]
   1. HTTP статус зориуд буруу
   √  result = OK
   √  registrationID тоон утгатай
@@ -34,13 +34,13 @@ Lab05 API системийн тест
   PUT http://localhost:3000/courses/CS313_03 [200 OK, 178B, 4ms]
 
 └ Идэвхгүй оюутан ERROR_INACTIVE_STUDENT
-  POST http://localhost:3000/registrations [200 OK, 198B, 6ms]
+  POST http://localhost:3000/registrations [200 OK, 198B, 5ms]
   √  HTTP статус 200
   √  result = ERROR_INACTIVE_STUDENT
 
 □ Байхгүй хичээл ERROR_NO_COURSE
 └ Setup: оюутан
-  PUT http://localhost:3000/students/B232270023_04 [200 OK, 178B, 5ms]
+  PUT http://localhost:3000/students/B232270023_04 [200 OK, 178B, 3ms]
 
 └ Байхгүй хичээл ERROR_NO_COURSE
   POST http://localhost:3000/registrations [200 OK, 191B, 6ms]
@@ -55,7 +55,7 @@ Lab05 API системийн тест
   PUT http://localhost:3000/courses/CS313_05 [200 OK, 178B, 4ms]
 
 └ Урьдач нөхцөл дутуу ERROR_PREREQUISITES
-  POST http://localhost:3000/registrations [200 OK, 215B, 5ms]
+  POST http://localhost:3000/registrations [200 OK, 215B, 6ms]
   √  HTTP статус 200
   √  result = ERROR_PREREQUISITES
   √  missing жагсаалт зөв
@@ -71,13 +71,13 @@ Lab05 API системийн тест
   PUT http://localhost:3000/students/B232270023_07 [200 OK, 178B, 4ms]
 
 └ Идэвхгүй оюутан ба байхгүй хичээл давхар алдаа
-  POST http://localhost:3000/registrations [200 OK, 198B, 5ms]
+  POST http://localhost:3000/registrations [200 OK, 198B, 6ms]
   √  HTTP статус 200
   √  result = ERROR_INACTIVE_STUDENT
 
 □ Урьдач нөхцөлгүй хичээлийн хязгаар
 └ Setup: оюутан
-  PUT http://localhost:3000/students/B232270023_08 [200 OK, 178B, 5ms]
+  PUT http://localhost:3000/students/B232270023_08 [200 OK, 178B, 3ms]
 
 └ Setup: хичээл
   PUT http://localhost:3000/courses/CS313_08 [200 OK, 178B, 4ms]
@@ -88,15 +88,15 @@ Lab05 API системийн тест
   √  result = OK
   √  registrationID тоон утгатай
 
-□ Хоосон үзсэн хичээлтэй үед урьдач биелээгүй
+□ Зарим урьдач үзсэн үед дутуу нөхцөлийг заах
 └ Setup: оюутан
-  PUT http://localhost:3000/students/B232270023_09 [200 OK, 178B, 4ms]
+  PUT http://localhost:3000/students/B232270023_09 [200 OK, 178B, 3ms]
 
 └ Setup: хичээл
   PUT http://localhost:3000/courses/CS313_09 [200 OK, 178B, 4ms]
 
-└ Хоосон үзсэн хичээлтэй үед урьдач биелээгүй
-  POST http://localhost:3000/registrations [200 OK, 223B, 5ms]
+└ Зарим урьдач үзсэн үед дутуу нөхцөлийг заах
+  POST http://localhost:3000/registrations [200 OK, 215B, 5ms]
   √  HTTP статус 200
   √  result = ERROR_PREREQUISITES
   √  missing жагсаалт зөв
@@ -109,12 +109,12 @@ Lab05 API системийн тест
   PUT http://localhost:3000/courses/CS313_10 [200 OK, 178B, 4ms]
 
 └ courseID талбар дутуу ERROR_BAD_REQUEST
-  POST http://localhost:3000/registrations [400 Bad Request, 202B, 4ms]
+  POST http://localhost:3000/registrations [400 Bad Request, 202B, 6ms]
   √  HTTP статус 400
   √  result = ERROR_BAD_REQUEST
 
 → JSONPlaceholder users: 3 oracle
-  GET https://jsonplaceholder.typicode.com/users [200 OK, 6.63kB, 83ms]
+  GET https://jsonplaceholder.typicode.com/users [200 OK, 6.62kB, 83ms]
   √  HTTP статус 200
   √  Хариу массив байна
   √  Эхний хэрэглэгчийн нэр Leanne Graham
@@ -134,9 +134,9 @@ Lab05 API системийн тест
 ├─────────────────────────┴──────────────────┴─────────────────┤
 │ total run duration: 2.4s                                     │
 ├──────────────────────────────────────────────────────────────┤
-│ total data received: 6.24kB (approx)                         │
+│ total data received: 6.23kB (approx)                         │
 ├──────────────────────────────────────────────────────────────┤
-│ average response time: 8ms [min: 4ms, max: 83ms, s.d.: 15ms] │
+│ average response time: 7ms [min: 3ms, max: 83ms, s.d.: 15ms] │
 └──────────────────────────────────────────────────────────────┘
 
 [31m  # [39m[31m failure        [39m[31m detail                                                         [39m
